@@ -45,11 +45,5 @@ Class Config {
     {
         $this->con = null;
     }
-
 }
-
-
-
-
-    // }
 ?>
