@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "77ef324b-e841-4f23-8cf8-3bfc70e6d503",
+		"name": "Test BE Detik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7223097"
+	},
+	"item": [
+		{
+			"name": "Get All Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:9000/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/index.php?references_id=1&merchant_id=merchant-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "references_id",
+							"value": "1"
+						},
+						{
+							"key": "merchant_id",
+							"value": "merchant-001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "invoice_id",
+							"value": "invoice-003",
+							"type": "text"
+						},
+						{
+							"key": "item_name",
+							"value": "Sabun",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "5000",
+							"type": "text"
+						},
+						{
+							"key": "payment_type",
+							"value": "virtual_acount",
+							"description": "virtual_acount, credit_card",
+							"type": "text"
+						},
+						{
+							"key": "customer_name",
+							"value": "wahyu",
+							"type": "text"
+						},
+						{
+							"key": "merchant_id",
+							"value": "merchant-001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
