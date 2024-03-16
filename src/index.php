@@ -35,7 +35,7 @@ function doAction(string $requestMethod) {
         echo $response;
 }
 
-function notFoundResponse($result): string
+function notFoundResponse(): string
 {
     return json_encode([
         'error' => true,
